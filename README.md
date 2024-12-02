@@ -1,6 +1,5 @@
 # Lingua AI Translation
 
-[![Lingua AI Translation](app/(chat)/opengraph-image.png)](https://lingua.vercel.ai/)
 
 A Cutting-edge AI Translation Platform Built with Gemini and Powered by Vercel.
 
