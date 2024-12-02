@@ -399,5 +399,7 @@ export async function DELETE(request: Request) {
     return new Response('An error occurred while processing your request', {
       status: 500,
     });
+    
   }
+  
 }
