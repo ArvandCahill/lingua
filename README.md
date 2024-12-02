@@ -1,41 +1,39 @@
-# Lingua AI Translation
+# Lingua AI 
 
 
-A Cutting-edge AI Translation Platform Built with Gemini and Powered by Vercel.
+A Cutting-edge AI Platform Built with Gemini and Powered by Vercel.
 
 [Demo Site](https://lingua.vercel.ai/)
 
 ## Features
 
 - **Gemini AI Integration**
-  - Advanced AI model for seamless and accurate text translation between languages.
+  - Advanced AI model for seamless and accurate text  between languages.
   - Real-time, high-performance text processing.
 
 - **AI SDK**
-  - Unified API for generating accurate translations with Gemini LLMs.
-  - Easy-to-use hooks for building dynamic translation interfaces.
-  - Flexible model provider options with Gemini integration, supporting multiple languages and translation tasks.
+  - Unified API for generating accurate s with Gemini LLMs.
+  - Easy-to-use hooks for building dynamic  interfaces.
+  - Flexible model provider options with Gemini integration, supporting multiple languages and  tasks.
 
 - **Tailwind CSS & Radix UI**
   - Beautiful and responsive design with Tailwind CSS for an enhanced user experience.
   - Accessible components from Radix UI, ensuring smooth interaction for users of all abilities.
 
 - **Data Persistence**
-  - Powered by [Vercel Postgres](https://vercel.com/storage/postgres) for storing user data and translation history.
-  - Secure file storage with [Vercel Blob](https://vercel.com/storage/blob) for managing translation documents.
+  - Powered by [Vercel Postgres](https://vercel.com/storage/postgres) for storing user data and  history.
+  - Secure file storage with [Vercel Blob](https://vercel.com/storage/blob) for managing  documents.
 
 - **NextAuth.js**
-  - Simple and secure user authentication for personalized translation services.
+  - Simple and secure user authentication for personalized  services.
 
 ## Model Providers
 
-Lingua uses **Gemini AI** as its default translation model, delivering fast and reliable translation services. With the [AI SDK](https://sdk.vercel.ai/docs), you can easily integrate additional model providers and customize language support.
+Lingua uses **Gemini AI** as its default  model, delivering fast and reliable  services. With the [AI SDK](https://sdk.vercel.ai/docs), you can easily integrate additional model providers and customize language support.
 
 ## Deploy Your Own
 
-You can deploy your own version of Lingua AI to Vercel with a single click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Flingua-ai&env=AUTH_SECRET,GEMINI_API_KEY&envDescription=Learn%20more%20about%20how%20to%20get%20the%20API%20Keys&envLink=https%3A%2F%2Fgithub.com%2Fvercel%2Flingua-ai%2Fblob%2Fmain%2F.env.example&demo-title=Lingua%20AI%20Translation&demo-description=An%20Open-Source%20AI%20Translation%20Platform%20Built%20With%20Gemini%20and%20Vercel.&demo-url=https%3A%2F%2Flingua.vercel.ai&stores=[{%22type%22:%22postgres%22},{%22type%22:%22blob%22}])
+You can deploy your own version of Lingua AI to Vercel.
 
 ## Running Locally
 
