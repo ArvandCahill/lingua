@@ -1,9 +1,9 @@
 import { compare } from 'bcrypt-ts';
 import NextAuth, { type User, type Session } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
+import Google from 'next-auth/providers/google';  // Import Google OAuth provider
 
 import { getUser } from '@/lib/db/queries';
-
 import { authConfig } from './auth.config';
 
 interface ExtendedSession extends Session {
@@ -28,6 +28,12 @@ export const {
         if (!passwordsMatch) return null;
         return users[0] as any;
       },
+    }),
+
+    // Google OAuth Provider
+    Google({
+      clientId: process.env.GOOGLE_CLIENT_ID!,  // from .env.local
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,  // from .env.local
     }),
   ],
   callbacks: {

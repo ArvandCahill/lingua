@@ -9,6 +9,7 @@ import { AuthForm } from '@/components/auth-form';
 import { SubmitButton } from '@/components/submit-button';
 
 import { login, type LoginActionState } from '../actions';
+import { signIn } from 'next-auth/react'; // Import signIn from next-auth
 
 export default function Page() {
   const router = useRouter();
@@ -16,12 +17,9 @@ export default function Page() {
   const [email, setEmail] = useState('');
   const [isSuccessful, setIsSuccessful] = useState(false);
 
-  const [state, formAction] = useActionState<LoginActionState, FormData>(
-    login,
-    {
-      status: 'idle',
-    },
-  );
+  const [state, formAction] = useActionState<LoginActionState, FormData>(login, {
+    status: 'idle',
+  });
 
   useEffect(() => {
     if (state.status === 'failed') {
@@ -39,6 +37,11 @@ export default function Page() {
     formAction(formData);
   };
 
+  // Function to handle Google OAuth login
+  const handleGoogleLogin = () => {
+    signIn('google', { callbackUrl: '/' }); // Redirect to homepage after successful login
+  };
+
   return (
     <div className="flex h-dvh w-screen items-start pt-12 md:pt-0 md:items-center justify-center bg-background">
       <div className="w-full max-w-md overflow-hidden rounded-2xl flex flex-col gap-12">
@@ -50,6 +53,15 @@ export default function Page() {
         </div>
         <AuthForm action={handleSubmit} defaultEmail={email}>
           <SubmitButton isSuccessful={isSuccessful}>Sign in</SubmitButton>
+          
+          {/* Google Login Button */}
+          <button
+            onClick={handleGoogleLogin}
+            className="w-full bg-blue-600 text-white py-2 rounded-md mt-4"
+          >
+            Sign in with Google
+          </button>
+
           <p className="text-center text-sm text-gray-600 mt-4 dark:text-zinc-400">
             {"Don't have an account? "}
             <Link

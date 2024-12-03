@@ -15,25 +15,25 @@ export const authConfig = {
       const isOnChat = nextUrl.pathname.startsWith('/');
       const isOnRegister = nextUrl.pathname.startsWith('/register');
       const isOnLogin = nextUrl.pathname.startsWith('/login');
-
+  
       if (isLoggedIn && (isOnLogin || isOnRegister)) {
         return Response.redirect(new URL('/', nextUrl as unknown as URL));
       }
-
+  
       if (isOnRegister || isOnLogin) {
-        return true; // Always allow access to register and login pages
+        return true; // Selalu izinkan akses ke halaman login dan register
       }
-
+  
       if (isOnChat) {
-        if (isLoggedIn) return true;
-        return false; // Redirect unauthenticated users to login page
+        return true; // Izinkan akses ke halaman chat tanpa login
       }
-
+  
       if (isLoggedIn) {
         return Response.redirect(new URL('/', nextUrl as unknown as URL));
       }
-
+  
       return true;
     },
   },
+  
 } satisfies NextAuthConfig;
