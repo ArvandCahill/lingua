@@ -25,8 +25,7 @@ export const authConfig = {
       }
   
       if (isOnChat) {
-        if (isLoggedIn) return true;
-        return false; 
+        return true; // Izinkan akses ke halaman chat tanpa login
       }
   
       if (isLoggedIn) {
