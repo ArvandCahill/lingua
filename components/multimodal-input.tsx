@@ -31,13 +31,13 @@ import { Textarea } from './ui/textarea';
 const suggestedActions = [
   {
     title: 'What is the weather',
-    label: 'in San Francisco?',
-    action: 'What is the weather in San Francisco?',
+    label: 'in Jakarta',
+    action: 'What is the weather Jakarta?',
   },
   {
     title: 'Help me draft an essay',
-    label: 'about Silicon Valley',
-    action: 'Help me draft a short essay about Silicon Valley',
+    label: 'About something',
+    action: 'Help me draft a short essay',
   },
 ];
 
