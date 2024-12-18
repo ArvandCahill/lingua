@@ -53,14 +53,7 @@ export default function Page() {
         </div>
         <AuthForm action={handleSubmit} defaultEmail={email}>
           <SubmitButton isSuccessful={isSuccessful}>Sign in</SubmitButton>
-          
-          {/* Google Login Button */}
-          <button
-            onClick={handleGoogleLogin}
-            className="w-full bg-blue-600 text-white py-2 rounded-md mt-4"
-          >
-            Sign in with Google
-          </button>
+
 
           <p className="text-center text-sm text-gray-600 mt-4 dark:text-zinc-400">
             {"Don't have an account? "}
